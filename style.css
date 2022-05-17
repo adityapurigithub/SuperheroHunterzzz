@@ -1,4 +1,232 @@
-*{
+* {
     margin: 0;
     padding: 0;
+    color: white;
+    list-style: none;
+    text-decoration: none;
 }
+
+body {
+    background: url("assets/BG.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    /* max-height: 100vh; */
+    background-attachment: fixed;
+    overflow-x: hidden;  
+}
+
+li {
+    cursor: pointer;
+    margin: 10px;
+    opacity: 0.8;
+}
+
+.navbar {
+    width: 100vw;
+    height: 60px;
+    background-color: rgb(31, 31, 31);
+    /* opacity: 0.92; */
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    box-shadow: 10px 10px 100px 1px rgba(255, 255, 255, 1);
+    position: fixed;
+    top: 0;
+}
+
+li:hover {
+    color: rgb(255, 255, 255);
+    opacity: 1;
+    transition:1s ease-out;
+}
+
+.navbar .nav-list {
+    width: 100%;
+    margin: 0px 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    margin: 50px 0;
+    
+}
+
+#title {
+    font-size: 2rem;
+    font-weight: 700;
+    word-spacing: 0.1rem;
+    letter-spacing: 0.3rem;
+    text-shadow: 2px 2px rgba(55, 255, 29, 0.451);
+    /* text-shadow: rgba(0, 0, 0, 1.0); */
+    padding: 0.2rem;
+    margin: 20px;
+}
+
+#search-bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    margin-bottom: 10px;
+}
+
+#search-bar input {
+    width: 80%;
+    height: 50px;
+    background-color: #2f1a1a;
+    opacity: 0.8;
+    border: 0.5px solid white;
+    border-radius: 5px;
+    padding: 10px;
+    word-spacing: 1px;
+    font-size: 1rem;
+    color: rgb(0, 255, 255);
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-family:'Brush Script MT', cursive;
+    
+}
+
+.result{
+    width: 60%;
+    height: auto;
+    background-color: #FF3CAC;
+    background-image: linear-gradient(225deg, #671543 0%, #402756 50%, #102b3f 100%);
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* box-shadow: 2px 2px 2px 2px black; */
+}
+.result:hover{
+    box-shadow: 1px 1px 20px 1px black;
+}
+
+/* searching ... */
+.search-info{
+    width: 95%;
+    margin: auto;
+    height: 150px;
+    border: 1px solid sandybrown;
+    display: flex;
+    background : linear-gradient(to right, rgba(40, 40, 60, 1) 0%, rgba(40, 0, 60, 0) 90%);
+    margin: 5px;
+    padding: 5px;
+
+}
+.img-container{
+    width: 35%;
+    height:100%;
+    border: 1px solid white;
+    box-shadow: 1px 1px 50px 2px rgba(255, 255, 255, 0.5);
+}
+.img-container img{
+    width: 100%;
+    height: inherit;
+    overflow: hidden;
+}
+.details-container{
+    display: flex;
+    width: 65%;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 600;
+    word-spacing: 1px;
+    letter-spacing: 1px;
+    font-family: 'Sofia';
+}
+
+.favourite-button-container{
+    width: 85%;
+    height: auto;
+    margin-top: 10px;
+}
+
+.favourite-button-container button{
+    width: 100%;
+    padding: 5px;
+    background-color: #474a76;
+    cursor: pointer;
+    border: 0.5px solid #FF3CAC;
+    border-radius: 15px;
+}
+.favourite-button-container button:hover{
+    background-color: rgb(236, 223, 223);
+    color: black;
+    box-shadow: 1px 1px 5px 1px rgb(31, 31, 31,0.4);
+}
+
+.details-button-container{
+    width: 85%;
+    height: auto;
+    margin-top: 10px;
+}
+
+.details-button-container button{
+    width: 100%;
+    padding: 5px;
+    background-color: #474a76;
+    cursor: pointer;
+    border: 0.5px solid #FF3CAC;
+    border-radius: 15px;
+}
+.details-button-container button:hover{
+    background-color: rgb(236, 223, 223);
+    color: black;
+    box-shadow: 1px 1px 5px 1px rgb(31, 31, 31,0.4);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**/
+
+#empty{
+    width: 100%;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 600;
+    word-spacing: 0.2rem;
+    letter-spacing: 0.3rem;
+    text-shadow: 2px 2px rgba(55, 255, 29, 0.451);
+    padding: 0.2rem;
+    margin: 20px;
+    opacity: 1;
+}
+
+
