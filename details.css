@@ -1,0 +1,95 @@
+main{
+    font-family: 'International Super Hero Exp', sans-serif;
+    font-size: 1.5rem;
+    word-spacing: 1px;
+    letter-spacing: 1px;
+}
+.container{
+    background-color: rgba(0,0,0,0.5);
+    border:1px dashed brown;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: auto;
+    text-align: center;
+    /* border: 1px solid white; */
+    margin: 40px;
+    animation: load 4s ease;
+}
+.container:hover{
+    border:1px solid sandybrown;
+    
+}
+@keyframes load{
+    0%{
+        opacity: 0.2;
+        transform: scaleX(0);
+    }
+
+    100%{
+        opacity: 1;
+        transform: scale(100%);
+    }
+}
+
+.imgContainer{
+    width:200px;
+    height:200px;
+    
+   
+}
+.imgContainer img{
+    width: inherit;
+    height: inherit;
+    border: 1px solid black;
+    border-radius:10px;
+    transition:all 1s ease-in-out;
+}
+.imgContainer img:hover{
+    transform: scale(105%);
+    
+
+}
+.addFav {
+    margin-top: 15px;
+    background-color:rgba(255, 255, 255, 0);
+    border: none;
+    outline: none;
+}
+.addFav i{
+   color: red;
+   cursor: pointer;
+   transition: 1s ease;
+}
+.addFav i:hover{
+    transform: scale(120%);
+}
+.addFav i:active{
+    color: rgb(255, 71, 71);
+    transform: scale(150%);
+    transition: all 1.5s ease;
+ }
+.detailcontainer{
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    border-radius: 10px;
+}
+.name{
+    width: 90%;
+    margin: 10px;
+}
+.common{
+    width: 90%;
+    height: auto;
+    
+    margin: 8px;
+    padding: 5px;
+}
