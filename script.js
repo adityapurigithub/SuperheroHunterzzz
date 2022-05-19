@@ -1,14 +1,10 @@
 // console.log('MainScriptLoaded')
-//getting all the required elements
 
+//getting all the required elements
 const result = document.querySelector('.result');
 const search = document.querySelector('#search-bar input');
 
-
-
 search.addEventListener('keyup', searching);
-
-
 
 function searching() {
     // console.log('seraching..')
@@ -112,8 +108,8 @@ function showResult(data) {
 function pushfav(heroId){
     // console.log(hero)
     var favArr;
-    if(localStorage.getItem('hero')===null){
-        favArr=[];
+    if(localStorage.getItem('hero')===null){  //checking if array exist...
+        favArr=[];  //if not any arr exist creating favArr
     }
     else{
         favArr=JSON.parse(localStorage.getItem('hero'))

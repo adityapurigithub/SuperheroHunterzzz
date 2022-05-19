@@ -5,17 +5,15 @@
     margin: 30px;
     width: 60%;
     height: auto;
-    background-color: rgba(32, 32, 32,0.4);
     border-radius: 30px;
-    /* transition: all 1.5s ease-in-out; */
     animation: animate 2s ease-in-out;
 }
 @keyframes animate{
     0%{
-        transform: rotate(360deg) scale(0);
+        transform: scale(50%);
     }
     100%{
-        transform: rotate(0) scale(100%);;
+        transform:scale(100%);;
     }
 }
 .heroContainer {
@@ -24,12 +22,21 @@
     align-items: center;
     border: 1px solid white;
     margin: 20px;
-    transition:all 2s ease;
+    transition:all 0.7s ease;
 }
 
 .heroContainer:hover {
     border: 1px solid rgb(255, 0, 0);
-    transform: scale(120%);
+    transform: scale(115%);
+}
+.heroName{
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: 700;
+
+
 }
 .imgContainer {
     width: 200px;
@@ -98,3 +105,18 @@
     background-color:black;
     color:  rgb(236, 223, 223);
 }
+
+
+#empty{
+    width: 100%;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 600;
+    word-spacing: 0.2rem;
+    letter-spacing: 0.3rem;
+    text-shadow: 2px 2px rgba(55, 255, 29, 0.451);
+    padding: 0.2rem;
+    margin: 20px;
+    opacity: 1;
+}
+

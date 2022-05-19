@@ -33,6 +33,7 @@ function showDetails(data){
     const name=document.createElement('div');
     const biography=document.createElement('div');
     const connections=document.createElement('div');
+    const relatives=document.createElement('div');
     const stats=document.createElement('div');
     const work=document.createElement('div');
 
@@ -44,6 +45,7 @@ function showDetails(data){
     name.classList.add('name');
     biography.classList.add('common');
     connections.classList.add('common');
+    relatives.classList.add('common');
     stats.classList.add('common');
     work.classList.add('common');
     
@@ -61,14 +63,18 @@ function showDetails(data){
     connections.innerHTML=`<span style="margin-bottom:10px; color:white; font-size:2rem; text-decoration:underline;">Connections</span> : `+data.connections['group-affiliation'];
     detailcontainer.appendChild(connections);
 
-    stats.innerHTML=`<span style="margin-bottom:10px; color:white; font-size:2rem; text-decoration:underline;">PowerStats</span> : <br>`+
-    `<span>1.Durability: </span>`+data.powerstats.durability+`<br>`+
-    `<span>2.Intelligence: </span>`+data.powerstats.intelligence+`<br>`+
-    `<span>3.Strength: </span>`+data.powerstats.strength+`<br>`+
+    relatives.innerHTML=`<span style="margin-bottom:10px; color:white; font-size:2rem; text-decoration:underline;">Relatives</span> : `+data.connections.relatives;
+    detailcontainer.appendChild(relatives);
+
+
+    stats.innerHTML=`<span style="margin-bottom:10px; color:white; font-size:2rem; text-decoration:underline;">PowerStats</span> : `+
+    `<span>1.Durability: </span>`+data.powerstats.durability+`&nbsp &nbsp`+
+    `<span>2.Intelligence: </span>`+data.powerstats.intelligence+`&nbsp &nbsp`+
+    `<span>3.Strength: </span>`+data.powerstats.strength+`&nbsp &nbsp`+
     `<span>4.Speed: </span>`+data.powerstats.speed;
     detailcontainer.appendChild(stats);
 
-    work.innerHTML=`<span style="margin-bottom:10px; color:white; font-size:2rem; text-decoration:underline;">Work/Occupation</span> : `+data.connections['group-affiliation'];
+    work.innerHTML=`<span style="margin-bottom:10px; color:white; font-size:2rem; text-decoration:underline;">Occupation</span> : `+data.work.occupation;
     detailcontainer.appendChild(work);
 
     

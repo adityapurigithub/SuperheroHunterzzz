@@ -3,17 +3,18 @@ main{
     font-size: 1.5rem;
     word-spacing: 1px;
     letter-spacing: 1px;
+
 }
 .container{
+    width: 60%;
     background-color: rgba(0,0,0,0.5);
     border:1px dashed brown;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 50%;
     height: auto;
-    text-align: center;
+    text-align: start;
     /* border: 1px solid white; */
     margin: 40px;
     animation: load 4s ease;
@@ -92,4 +93,11 @@ main{
     
     margin: 8px;
     padding: 5px;
+}
+
+
+@media screen and (max-width:768px) {
+    .container{
+        width: 95%;
+    }
 }
