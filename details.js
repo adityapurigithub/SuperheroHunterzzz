@@ -3,20 +3,21 @@ const mainContainer=document.querySelector('.container');
 const searchParams = new URLSearchParams(window.location.search);
 // console.log(searchParams);
 
-var id = searchParams.get('id'); //getting the id from ulrsearchparams
-// console.log(id)
+//getting the id from ulrsearchparams
+var id = searchParams.get('id');
+ // console.log(id)
 
+ // when the page/dom Elements loaded.. this will fire....
 document.addEventListener('DOMContentLoaded',fetching);
 
 function fetching(){
-
         fetch(`https://superheroapi.com/api.php/3358031561086203/${id}`)
             .then((response)=>{
                 return response.json();
                 // console.log(response.json())
             })
             .then((data)=>{
-                console.log(data);
+                // console.log(data);
                 showDetails(data);
 
             })
@@ -49,6 +50,7 @@ function showDetails(data){
     stats.classList.add('common');
     work.classList.add('common');
     
+    //after getting the data from api response.............
     img.src=data.image.url;
     imgContainer.appendChild(img);
 
@@ -75,16 +77,16 @@ function showDetails(data){
     detailcontainer.appendChild(stats);
 
     work.innerHTML=`<span style="margin-bottom:10px; color:white; font-size:2rem; text-decoration:underline;">Occupation</span> : `+data.work.occupation;
+    
+    //appending the childs elements to the detailcontainer
     detailcontainer.appendChild(work);
 
-    
-    
-    
-    
+        //appending the containerchild elements to the main container
     mainContainer.appendChild(imgContainer);
     mainContainer.appendChild(addFav);
     mainContainer.appendChild(detailcontainer);
-    console.log(mainContainer)
+    
+    // console.log(mainContainer)
     
 
 }
