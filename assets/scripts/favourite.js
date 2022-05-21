@@ -71,7 +71,9 @@ function showHeroInfo(data) {
             // console.log(i)
         }
         localStorage.setItem("hero", JSON.stringify(favArr));
-        location.reload();
+        if(favArr.length===0){
+            location.reload();
+        }
     })
 
     detailBtn.innerText = 'Check My SuperPowers  ';
